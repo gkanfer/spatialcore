@@ -1,0 +1,24 @@
+add to spatial notebook
+https://github.com/gkanfer/temp_proj3/blob/main/supp_report_11_v12_spatial_proximity_analysis.ipynb
+
+visulisation of hires and low res
+https://github.com/gkanfer/temp_proj3/blob/main/supp_report_11_v13_display_sq_low_res_sting_score.ipynb
+https://github.com/gkanfer/temp_proj3/blob/main/supp_report_11_v9_display_high_res_genes.ipynb
+https://github.com/gkanfer/temp_proj1/blob/main/xenium_run_graphcompass.py
+
+align codex with xenium
+https://github.com/gkanfer/temp_proj1/blob/main/article_notebooks/nb_06_xenium_codex_alignment.ipynb
+
+align xenium with H&E
+https://github.com/gkanfer/temp_proj3/blob/main/supp_report_11_v4_display_HaE.ipynb
+https://github.com/gkanfer/temp_proj3/blob/main/supp_report_11_v5_display_HaE_nudge.ipynb
+
+ligand receptor pair
+https://github.com/gkanfer/temp_proj1/blob/main/article_notebooks/nb_04_ligand_receptor_analysis.ipynb
+https://github.com/gkanfer/temp_proj1/blob/main/xenium_run_lr_analysis_argprase.py
+
+cosinus similarity 
+https://github.com/gkanfer/temp_proj2/blob/main/report_23_supp_7_tacoo_wt_similarity.ipynb
+
+niche finder
+https://github.com/gkanfer/temp_proj2/blob/main/report_23_supp_8_nichFinder_hep.ipynb

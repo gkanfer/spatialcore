@@ -1,0 +1,15 @@
+
+mamba install scanpy  
+pip install "spatialdata[extra]" 
+mamba install -c conda-forge jupyter 
+pip install "sccoda" "tensorflow~=2.12" "tensorflow-probability~=0.20" 
+pip install "tf-keras~=2.12" 
+pip install voyagerpy  
+
+mamba install squidpy  
+pip install pydeseq2 
+pip install scvi-tools 
+
+pip install cellcharter 
+pip install scib 
+mamba install numpyro 

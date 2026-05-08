@@ -1,0 +1,57 @@
+# Experimental full-stack template only.
+# This environment is expected to be fragile because SpatialData/Squidpy,
+# TensorFlow/sccoda, scVI/PyTorch, and optional niche packages can pin
+# incompatible Python, NumPy, or platform-specific dependencies.
+name: spatialcore-all
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - anndata
+  - scanpy
+  - spatialdata
+  - spatialdata-io
+  - spatialdata-plot
+  - squidpy
+  - geopandas
+  - shapely
+  - scikit-image
+  - tifffile
+  - imagecodecs
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - seaborn
+  - tqdm
+  - arviz
+  - pymc
+  - numpyro
+  - ipykernel
+  - jupyter
+  - pytest
+  - pytest-cov
+  - ruff
+  - build
+  - pip
+  - pip:
+      - bin2cell
+      - celltypist
+      - decoupler
+      - gseapy
+      - pydeseq2
+      - scvi-tools
+      - spatialleiden
+      - stlearn
+      - voyagerpy
+      - sccoda
+      - tensorflow~=2.12
+      - tensorflow-probability~=0.20
+      - tf-keras~=2.12
+      - cellcharter
+      - graphcompass
+      - scib
+      - tacco
+      - -e ".[spatial,xenium,visiumhd,codex-he,modeling,niche,dev]"

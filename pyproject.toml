@@ -1,0 +1,136 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spatialcore"
+version = "0.1.0"
+description = "Reusable spatial omics workflows for Xenium, Visium HD, CODEX, H&E, AnnData, and SpatialData analyses."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+  {name = "SpatialCore Developers"}
+]
+keywords = [
+  "spatial transcriptomics",
+  "single-cell",
+  "AnnData",
+  "SpatialData",
+  "Xenium",
+  "Visium HD",
+  "CODEX"
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Bio-Informatics"
+]
+dependencies = [
+  "anndata>=0.10",
+  "matplotlib>=3.7",
+  "numpy>=1.23",
+  "pandas>=1.5",
+  "scanpy>=1.9",
+  "scikit-learn>=1.2",
+  "scipy>=1.10",
+  "seaborn>=0.12",
+  "statsmodels>=0.14",
+  "tqdm>=4.65"
+]
+
+[project.optional-dependencies]
+spatial = [
+  "geopandas",
+  "shapely",
+  "scikit-image",
+  "spatialdata",
+  "spatialdata-io",
+  "spatialdata-plot",
+  "squidpy",
+  "tifffile"
+]
+codex-he = [
+  "geopandas",
+  "shapely",
+  "scikit-image",
+  "spatialdata",
+  "spatialdata-io",
+  "spatialdata-plot",
+  "tifffile"
+]
+xenium = [
+  "celltypist",
+  "scvi-tools",
+  "spatialdata",
+  "spatialdata-io",
+  "spatialdata-plot",
+  "squidpy",
+  "stlearn",
+  "tifffile"
+]
+visiumhd = [
+  "bin2cell",
+  "scvi-tools",
+  "spatialdata",
+  "spatialdata-io",
+  "spatialdata-plot",
+  "spatialleiden",
+  "squidpy",
+  "voyagerpy"
+]
+modeling = [
+  "arviz",
+  "decoupler",
+  "gseapy",
+  "numpyro",
+  "pydeseq2",
+  "pymc",
+  "sccoda",
+  "tensorflow~=2.12",
+  "tensorflow-probability~=0.20",
+  "tf-keras~=2.12"
+]
+gpu = [
+  "cupy",
+  "rapids-singlecell",
+  "rmm"
+]
+niche = [
+  "cellcharter",
+  "graphcompass",
+  "scib",
+  "tacco"
+]
+dev = [
+  "build",
+  "ipykernel",
+  "jupyter",
+  "pytest",
+  "pytest-cov",
+  "ruff"
+]
+
+[project.urls]
+Homepage = "https://github.com/gkanfer/spatialcore"
+Issues = "https://github.com/gkanfer/spatialcore/issues"
+
+[tool.setuptools.packages.find]
+include = ["spatialcore*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["B008"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

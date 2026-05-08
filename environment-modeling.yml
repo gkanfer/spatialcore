@@ -1,0 +1,29 @@
+name: spatialcore-modeling
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - anndata
+  - scanpy
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - seaborn
+  - arviz
+  - pymc
+  - numpyro
+  - ipykernel
+  - jupyter
+  - pip
+  - pip:
+      - gseapy
+      - decoupler
+      - pydeseq2
+      - sccoda
+      - tensorflow~=2.12
+      - tensorflow-probability~=0.20
+      - tf-keras~=2.12
+      - -e ".[modeling]"

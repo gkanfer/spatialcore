@@ -1,0 +1,27 @@
+name: spatialcore-xenium
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - anndata
+  - scanpy
+  - spatialdata
+  - spatialdata-io
+  - spatialdata-plot
+  - squidpy
+  - geopandas
+  - shapely
+  - tifffile
+  - matplotlib
+  - seaborn
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - ipykernel
+  - jupyter
+  - pip
+  - pip:
+      - celltypist
+      - scvi-tools
+      - -e ".[xenium]"

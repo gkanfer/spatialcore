@@ -1,0 +1,222 @@
+You are an expert Python developer with experience in scientific Python packages, spatial transcriptomics, single-cell analysis, SpatialData, AnnData, Scanpy, Squidpy, Xenium, Visium HD, CODEX, H&E image workflows, and reproducible open-source package development.
+
+I want to create an open-source Python package called:
+
+spatialcore
+
+This package should be based on my existing notebook code and project examples. Do not create the package from scratch without using my examples. My notebooks should guide the package structure, function names, workflow logic, plotting style, and analysis scope.
+
+The package should eventually support:
+
+- Reading and writing SpatialData / AnnData objects
+- Xenium analysis
+- Visium HD analysis
+- CODEX and H&E-related workflows
+- Quality control
+- Preprocessing and normalization
+- Cell annotation and label transfer
+- Spatial distance analysis
+- Spatial neighborhood and niche analysis
+- Clustering
+- Differential gene expression
+- GSEA and pathway analysis
+- Publication-style plotting
+- Report and output-table generation
+
+Current project materials:
+
+example_notebooks_from_github/
+notebook_list.txt
+spatiocore_reference_notebook.ipynb
+mamba_install.txt
+
+Important explanation of the project materials:
+
+1. spatiocore_reference_notebook.ipynb
+
+This is the main reference notebook. It contains central code chunks copied from my previous work. These code chunks represent the main workflows and functions that should become part of the package.
+
+Use this notebook as the primary source for package design.
+
+Do not execute this notebook.
+Do not modify this notebook.
+Do not save a new version of this notebook.
+
+2. notebook_list.txt
+
+This file lists selected/highlighted notebooks from example_notebooks_from_github/.
+
+Use this file to understand which notebooks are most important for the package.
+
+Do not modify this file.
+
+3. mamba_install.txt
+
+This file contains information about packages, dependencies, and environments used across my projects.
+
+Use it to create a theoretical dependency strategy and environment-template plan.
+
+Do not install anything.
+Do not solve a Mamba or Conda environment.
+Do not run installation commands.
+
+4. example_notebooks_from_github/
+
+This directory contains example notebooks from three main project groups:
+
+- Xenium melanoma and toxicology project
+- Xenium brain project
+- Visium HD liver project
+
+Use these notebooks as read-only examples for understanding my coding style, analysis workflows, plotting style, and expected package functions.
+
+Do not modify, overwrite, rename, move, or delete anything inside example_notebooks_from_github/.
+Do not execute any notebook cells.
+
+Your first task is PLAN MODE ONLY.
+
+Do not create files yet.
+Do not edit files yet.
+Do not install anything.
+Do not run Python.
+Do not run tests.
+Do not run notebook cells.
+Do not load real data.
+Do not save figures, tables, AnnData, SpatialData, Zarr, H5AD, H5, Parquet, CSV, Excel, or image files.
+
+In this Plan mode step, inspect the project structure and reference materials in read-only mode and write a clear implementation plan.
+
+The plan should include:
+
+1. Initial understanding of the project
+2. Files reviewed
+3. Main workflows identified from the reference notebook and example notebooks
+4. Proposed package structure for spatialcore
+5. Proposed modules and functions
+6. Dependency and Mamba environment strategy
+7. Potential dependency conflicts and risks
+8. Whether one unified environment is realistic
+9. Alternative strategy if one environment is not realistic, such as optional dependencies, separate environment files, or modular install groups
+10. Plotting and publication-style output strategy
+11. Testing strategy using synthetic/mock data only
+12. Documentation strategy
+13. Exact list of files you would create during implementation
+14. Exact list of files and directories that must remain read-only
+15. Questions or assumptions before implementation
+
+Proposed package modules may include:
+
+spatialcore/
+    __init__.py
+    io.py
+    qc.py
+    preprocessing.py
+    annotation.py
+    spatial.py
+    niches.py
+    de.py
+    enrichment.py
+    plotting.py
+    reports.py
+    utils.py
+
+tests/
+docs/
+examples/
+README.md
+pyproject.toml
+environment.yml
+environment-dev.yml
+environment-xenium.yml
+environment-visiumhd.yml
+environment-modeling.yml
+LICENSE
+.gitignore
+
+The exact structure can be adjusted if needed, but the package should be modular, readable, and easy to extend.
+
+Important plotting requirements:
+
+All plotting and table-output functions must be designed for scientific publication-quality output.
+
+The default plot style should be suitable for journals such as Cell or Nature.
+
+Plots should use:
+
+- appropriate figure size
+- high DPI option, preferably 300 or higher
+- readable font sizes
+- clean legends
+- clear axis labels
+- good spacing
+- clean multi-panel layouts
+- adjustable panel size
+- returnable figure and axis objects
+
+When multiple plots are expected, the layout, figure size, font size, and spacing should be adjusted automatically or through clear parameters.
+
+For any function that produces a plot, figure, or table, the default behavior should be:
+
+1. display the output in the current Jupyter notebook
+2. return the figure, axis, table, or DataFrame object
+3. not save anything locally
+
+Saving should only happen when the user explicitly provides a save path or sets a save option.
+
+For example:
+
+plot_qc_spatial(..., save_path=None)
+plot_gsea_dotplot(..., save_path=None)
+
+If save_path=None, do not save anything.
+
+Only save when save_path is explicitly provided.
+
+Important implementation restrictions for later:
+
+When I approve implementation, you may create package source files, documentation files, test templates, environment-template files, and example scripts.
+
+However, even during implementation, you must not execute the package or run real analysis.
+
+You must not:
+
+- install packages
+- solve a Mamba or Conda environment
+- run notebook cells
+- run Python scripts
+- run tests
+- read real Xenium data
+- read real Visium HD data
+- read real CODEX data
+- read real H&E images
+- read real AnnData or SpatialData objects
+- write AnnData objects
+- write SpatialData objects
+- write Zarr stores
+- write H5AD files
+- write H5 files
+- write Parquet files
+- write CSV files from analysis results
+- write Excel files from analysis results
+- save figures
+- save plots
+- save tables
+- generate real analysis outputs
+- modify original notebooks
+- modify original data files
+- move, rename, delete, or overwrite existing user files
+
+You may only create files that are part of the new package structure, after I approve the plan.
+
+Do not modify these original source/reference files:
+
+spatiocore_reference_notebook.ipynb
+notebook_list.txt
+mamba_install.txt
+example_notebooks_from_github/
+
+These are read-only references.
+
+End your Plan mode response with:
+
+I will not create files, install environments, execute workflows, load real data, or generate analysis outputs until you approve the plan.

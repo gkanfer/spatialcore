@@ -1,0 +1,26 @@
+name: spatialcore-codex-he
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - anndata
+  - scanpy
+  - spatialdata
+  - spatialdata-io
+  - spatialdata-plot
+  - geopandas
+  - shapely
+  - scikit-image
+  - tifffile
+  - imagecodecs
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - ipykernel
+  - jupyter
+  - pip
+  - pip:
+      - -e ".[codex-he]"

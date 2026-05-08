@@ -1,0 +1,24 @@
+name: spatialcore-dev
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - anndata
+  - scanpy
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - seaborn
+  - tqdm
+  - ipykernel
+  - jupyter
+  - pytest
+  - pytest-cov
+  - ruff
+  - build
+  - pip
+  - pip:
+      - -e ".[dev]"

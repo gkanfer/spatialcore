@@ -1,0 +1,43 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.ipynb_checkpoints/
+
+# Local environments
+.venv/
+venv/
+env/
+.conda/
+example_notebooks_from_github/
+
+# Generated scientific outputs
+*.h5ad
+*.h5
+*.hdf5
+*.zarr/
+*.parquet
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.pdf
+*.svg
+
+# Keep source reference notebooks tracked if already present.
+!spatiocore_reference_notebook.ipynb
+!notebook_list.txt
+!mamba_install.txt
+!agent_instraction.txt

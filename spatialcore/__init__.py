@@ -18,6 +18,8 @@ from . import (
     utils,
 )
 
+from .qc import run_qc_workflow
+
 __all__ = [
     "alignment",
     "annotation",
@@ -34,6 +36,7 @@ __all__ = [
     "reports",
     "spatial",
     "utils",
+    "run_qc_workflow",
 ]
 
 __version__ = "0.1.0"
